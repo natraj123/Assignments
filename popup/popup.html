@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>
+        </title>
+        <link rel="stylesheet" href="style.css"/>
+        <script
+            src="https://code.jquery.com/jquery-2.2.2.min.js"
+            integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
+            crossorigin="anonymous">
+        </script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react-with-addons.js"></script>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        
+    </head>
+    <body>
+    <div id="content"></div>
+     <script type="text/babel">
+        var App = React.createClass({
+		    render: function() {
+		        return (
+		         <div>
+            <button type = "button" className = "btn btn-primary btn-lg" data-toggle = "modal"          data-target = "#myModal">
+            	click here
+            </button>
+            <div className = "modal fade"
+            id = "myModal"
+            tabIndex = "-1"
+            role = "dialog"
+            aria-labelledby = "myModalLabel"
+            aria-hidden = "true">
+            <div className = "modal-dialog">
+            <div className = "modal-content">
+            <div className = "modal-header plain">
+            <button type = "button"
+            className = "close"
+            data-dismiss = "modal">
+            <span aria-hidden = "true" >&times;
+        </span>
+        <span className="sr-only">
+            Close
+        </span>
+        </button>
+        <h4 className = "modal-title"
+        id = "myModalLabel">
+        Medication History </h4>
+        </div>
+        <div className = "modal-body">
+        There are no medications in your history to search for lower cost alternatives for. </div>
+        <div className = "modal-footer noPadding">
+        <button type = "button"
+        className = "btn btn-primary btn-block sharp"
+        data-dismiss = "modal">
+        OK </button>
+        
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+		        );
+		    }
+		});
+
+	 React.render(<App />, 
+	 	document.getElementById('content')
+	 	);
+
+       </script>
+    </body>
+</html>
